@@ -110,7 +110,6 @@ public class ChatClient {
                 String name = "";
                 for(int i = 0; i < (line.substring(8) + "\n").length(); i++) {
                 	if(nameAlreadyRegistered == true) {
-                		//nameAlreadyRegistered = false;
                 		System.out.println("I am breaking out! :D");
                 		break;
                 	}
@@ -138,7 +137,6 @@ public class ChatClient {
                 			clientCounter++;
                 			break;
                 		} else {
-                			//nameAlreadyRegistered = false;
                 			break;
                 		}
                 	} else {
@@ -147,12 +145,10 @@ public class ChatClient {
                 }
                 System.out.println("I broke out! :D");
                 if(nameAlreadyRegistered == false) {
-	                //String namenListe = nutzerListe.getText();
                 	String namenListe = "";
 	                System.out.println(clientCounter + " bla");
 	                if(clientCounter != 0) {
 	                	System.out.println(clientCounter + " bla");
-	                	//namenListe = namenListe + "\n" + namenListe_String.get(clientCounter - 1);
 	                	for(int i = 0; i < namenListe_String.size(); i++) {
 	                		namenListe = namenListe + namenListe_String.get(i) + "\n";
 	                		System.out.println("\n\n\n\n" + namenListe + "\n\n\n\n");
