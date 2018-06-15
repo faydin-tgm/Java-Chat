@@ -110,7 +110,6 @@ public class ChatClient {
                 String name = "";
                 for(int i = 0; i < (line.substring(8) + "\n").length(); i++) {
                 	if(nameAlreadyRegistered == true) {
-                		System.out.println("I am breaking out! :D");
                 		break;
                 	}
                 	char ch = (line.substring(8) + "\n").charAt(i);
@@ -121,14 +120,10 @@ public class ChatClient {
                 		for(int m = 0; m < clientCounter; m++) {
                 			if(!(namenListe_String.contains(name))) {
                 				if(name == eigenerName) {
-                					System.out.println( "Name is the same as your own!");
                 				} else {
                 					namenListe_String.add(clientCounter, name);
-	                				System.out.println(namenListe_String.size() + "");
-	                        		System.out.println( "I was here!");
                 				}
                 			} else {
-                				System.out.println( "Name already registered!");
                 				nameAlreadyRegistered = true;
                 				break;
                 			}
@@ -143,32 +138,24 @@ public class ChatClient {
                 		name = name + "" + ch;
                 	}
                 }
-                System.out.println("I broke out! :D");
                 if(nameAlreadyRegistered == false) {
                 	String namenListe = "";
-	                System.out.println(clientCounter + " bla");
 	                if(clientCounter != 0) {
-	                	System.out.println(clientCounter + " bla");
 	                	for(int i = 0; i < namenListe_String.size(); i++) {
 	                		namenListe = namenListe + namenListe_String.get(i) + "\n";
-	                		System.out.println("\n\n\n\n" + namenListe + "\n\n\n\n");
 	                	}
-	                	System.out.println(clientCounter + " bla");
 	                }
 	                namenListe = "Nutzer:\n" + namenListe;  // "Nutzer" als Überschrift
 	                nutzerListe.setText(namenListe);
 	                namenListe = "";
                 } else {
                 	nameAlreadyRegistered = false;
-                	System.out.println("clientCounter: " + clientCounter);
-                	System.out.println("No new name registered! :O");
                 }
                 
                 String namenListe = "";
                 
                 for(int i = 0; i < namenListe_String.size(); i++) {
             		namenListe = namenListe + namenListe_String.get(i) + "\n";
-            		System.out.println("\n\n" + namenListe + "\n\n");
             	}
                 namenListe = "Nutzer:" + namenListe;
                 nutzerListe.setText(namenListe);
